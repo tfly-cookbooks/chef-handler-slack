@@ -73,7 +73,12 @@ class Chef
           :token => @token,
         }
 
-        uri = URI("https://#{@team}.slack.com/services/hooks/incoming-webhook?token=#{@token}")
+        if token.include? "/"
+          uri = URI("https://hooks.slack.com/services/#{@token}")
+        else
+          uri = URI("https://#{@team}.slack.com/services/hooks/incoming-webhook?token=#{@token}")
+        end
+
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
 

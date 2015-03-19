@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name          = "chef-handler-slack"
-  s.version       = "0.1.0"
+  s.version       = "0.1.1"
   s.authors       = ["Derek Smith"]
   s.email         = ["derek@slack-corp.com"]
   s.homepage      = "https://github.com/tinyspeck/chef-handler-slack"
